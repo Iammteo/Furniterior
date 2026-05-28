@@ -7,7 +7,10 @@ export function Trust() {
   ];
 
   return (
-    <section className="bg-ink-soft border-y border-gold/15 py-8 md:py-12">
+    <section
+      className="border-y border-gold/15 py-8 md:py-12"
+      style={{ background: 'linear-gradient(90deg, #231E17 0%, #2A2318 50%, #231E17 100%)' }}
+    >
       <div className="wrap">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {items.map((item, i) => (

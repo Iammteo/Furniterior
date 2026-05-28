@@ -1,10 +1,10 @@
 export function Ticker() {
   const items = [
-    'We come to you',
+    'From £25',
     'Greater Manchester',
-    'From £50',
+    'Same day / Scheduled',
     'Hand-finished',
-    'Same-day where possible',
+    'We come to you',
   ];
 
   const looped = [...items, ...items];

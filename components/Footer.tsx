@@ -3,7 +3,10 @@ import { site, buildWhatsAppGeneralUrl } from '@/lib/site';
 
 export function Footer() {
   return (
-    <footer className="bg-ink-soft border-t border-gold/20 py-20 relative">
+    <footer
+      className="border-t border-gold/20 py-20 relative"
+      style={{ background: 'linear-gradient(180deg, #231E17 0%, #181510 100%)' }}
+    >
       <div className="wrap">
         {/* Mega wordmark */}
         <div className="text-center mb-12 pb-12 border-b border-gold/15">
@@ -23,9 +26,9 @@ export function Footer() {
               Service
             </h3>
             <ul className="space-y-2 font-sans text-cream/70 text-sm">
-              <li><Link href="#packages" className="hover:text-gold transition-colors">Bronze · £50</Link></li>
-              <li><Link href="#packages" className="hover:text-gold transition-colors">Silver · £90</Link></li>
-              <li><Link href="#packages" className="hover:text-gold transition-colors">Gold · £130</Link></li>
+              <li><Link href="#packages" className="hover:text-gold transition-colors">Mini Valet · £25</Link></li>
+              <li><Link href="#packages" className="hover:text-gold transition-colors">Premium Valet · £40</Link></li>
+              <li><Link href="#packages" className="hover:text-gold transition-colors">Silver Full Detail · £90</Link></li>
               <li><Link href="#packages" className="hover:text-gold transition-colors">Subscriptions</Link></li>
             </ul>
           </div>

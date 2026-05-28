@@ -12,11 +12,11 @@ export const site = {
   region: 'Greater Manchester',
   established: '2025',
 
-  // Contact — TODO: replace with Tobi's real values
-  whatsappNumber: '447XXXXXXXXX',     // SAMPLE — replace
-  whatsappDisplay: '+44 7000 000 000', // SAMPLE — replace
-  email: 'hello@furniterior.co.uk',    // SAMPLE — replace
-  instagram: 'furniterior',            // SAMPLE — replace
+  // Contact
+  whatsappNumber: '447350160774',
+  whatsappDisplay: '+44 7350 160774',
+  email: 'hello@furniterior.co.uk',    // TODO: replace
+  instagram: 'furniterior',            // TODO: replace
 
   // Operating
   hours: 'Mon – Sat · 8am – 6pm',
@@ -33,7 +33,7 @@ export const site = {
   ],
 
   // Calendly link — TODO: replace with real link
-  calendlyUrl: 'https://calendly.com/furniterior/booking', // SAMPLE
+  calendlyUrl: 'https://calendly.com/furniterior/booking',
 };
 
 // ============================================================

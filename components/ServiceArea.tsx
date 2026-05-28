@@ -19,7 +19,11 @@ export function ServiceArea() {
   };
 
   return (
-    <section id="area" className="py-32 bg-ink-soft relative">
+    <section
+      id="area"
+      className="py-32 relative"
+      style={{ background: 'linear-gradient(180deg, #231E17 0%, #2A2318 100%)' }}
+    >
       <div className="wrap">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           {/* Left: copy + checker */}
@@ -33,11 +37,15 @@ export function ServiceArea() {
             </h2>
 
             <p className="font-sans text-lg text-cream/70 leading-relaxed mb-8">
-              Quick check below to see if your postcode's covered. If you're just outside, message us — we often go further for full Gold details.
+              Quick check below to see if your postcode's covered. If you're just outside, message us — we often go further for full Silver details.
             </p>
 
             {/* Postcode checker */}
-            <form onSubmit={handleCheck} className="bg-ink border border-gold/20 rounded-sm p-5 md:p-6">
+            <form
+              onSubmit={handleCheck}
+              className="border border-gold/20 rounded-sm p-5 md:p-6"
+              style={{ background: 'linear-gradient(145deg, #1E1A12 0%, #181510 100%)' }}
+            >
               <label className="block">
                 <span className="block font-mono text-[10px] uppercase tracking-[0.22em] text-gold mb-3">
                   Check your postcode
@@ -51,11 +59,12 @@ export function ServiceArea() {
                       setCheckResult(null);
                     }}
                     placeholder="e.g. M20 4PE"
-                    className="flex-1 bg-ink-soft border border-cream/15 rounded-sm px-4 py-3 font-sans text-base text-cream placeholder:text-cream/30 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold/30 transition-all uppercase"
+                    className="flex-1 border border-cream/15 rounded-sm px-4 py-3 font-sans text-base text-cream placeholder:text-cream/30 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold/30 transition-all uppercase"
+                    style={{ background: '#231E17' }}
                   />
                   <button
                     type="submit"
-                    className="bg-gold text-ink px-5 py-3 font-sans text-[12px] uppercase tracking-[0.18em] font-semibold hover:bg-gold-bright transition-colors"
+                    className="bg-gold text-ink px-5 py-3 font-sans text-[12px] uppercase tracking-[0.18em] font-semibold hover:bg-gold-bright transition-colors rounded-sm"
                   >
                     Check
                   </button>
@@ -107,19 +116,23 @@ export function ServiceArea() {
             <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-gold mb-4">
               Postcodes covered
             </div>
-            <div className="bg-ink border border-gold/15 rounded-sm p-5 md:p-6">
+            <div
+              className="border border-gold/15 rounded-sm p-5 md:p-6"
+              style={{ background: 'linear-gradient(145deg, #1E1A12 0%, #181510 100%)' }}
+            >
               <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2">
                 {site.serviceArea.map((pc) => (
                   <span
                     key={pc}
-                    className="font-mono text-xs text-cream/85 bg-ink-soft border border-cream/10 rounded-sm py-1.5 px-2 text-center hover:border-gold/40 transition-colors"
+                    className="font-mono text-xs text-cream/85 border border-cream/10 rounded-sm py-1.5 px-2 text-center hover:border-gold/40 transition-colors"
+                    style={{ background: '#231E17' }}
                   >
                     {pc}
                   </span>
                 ))}
               </div>
               <p className="mt-5 pt-5 border-t border-cream/10 font-sans text-xs text-cream/55 leading-relaxed">
-                Don't see yours? Use the checker — sometimes nearby postcodes work too. We've travelled as far as Stockport, Bolton and Bury for full Gold details.
+                Don't see yours? Use the checker — sometimes nearby postcodes work too. We've travelled as far as Stockport, Bolton and Bury for full Silver details.
               </p>
             </div>
           </div>

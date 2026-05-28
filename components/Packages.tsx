@@ -15,7 +15,7 @@ export function Packages() {
 
   return (
     <>
-      <section id="packages" className="py-32 bg-ink relative">
+      <section id="packages" className="py-32 relative" style={{ background: 'linear-gradient(180deg, #181510 0%, #231E17 100%)' }}>
         <div className="wrap">
           {/* Header */}
           <div className="grid md:grid-cols-12 gap-8 mb-20 items-end">
@@ -29,7 +29,7 @@ export function Packages() {
               </h2>
             </div>
             <div className="md:col-span-5">
-              <p className="font-sans text-base md:text-lg text-cream/70 leading-relaxed">
+              <p className="font-sans text-base md:text-lg text-cream/75 leading-relaxed">
                 Whether you need a quick refresh or a full concours-quality detail, every package is hand-finished by us — to the same standard.
               </p>
             </div>
@@ -47,7 +47,7 @@ export function Packages() {
           </div>
 
           {/* Bottom note */}
-          <p className="text-center mt-12 font-mono text-[10px] uppercase tracking-[0.22em] text-cream/40">
+          <p className="text-center mt-12 font-mono text-[10px] uppercase tracking-[0.22em] text-cream/50">
             Subscriptions can be paused or cancelled anytime · Pay securely via Stripe
           </p>
         </div>
@@ -72,35 +72,40 @@ function PackageCard({
 }) {
   return (
     <article
-      className={`relative bg-ink-soft border ${
-        pkg.featured ? 'border-gold' : 'border-gold/20'
-      } rounded-sm p-8 md:p-10 flex flex-col transition-all hover:border-gold ${
-        pkg.featured ? 'md:scale-105 md:-translate-y-2 shadow-2xl shadow-gold/10' : ''
+      className={`relative rounded-sm p-8 md:p-10 flex flex-col transition-all hover:border-gold ${
+        pkg.featured
+          ? 'border-2 border-gold shadow-2xl shadow-gold/15 md:scale-105 md:-translate-y-2'
+          : 'border border-gold/25 hover:border-gold/60'
       }`}
+      style={{
+        background: pkg.featured
+          ? 'linear-gradient(145deg, #2A2318 0%, #1E1A12 60%, #2A2318 100%)'
+          : 'linear-gradient(145deg, #231E17 0%, #1A1610 100%)',
+      }}
     >
       {pkg.featured && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-ink px-4 py-1 font-mono text-[10px] uppercase tracking-[0.22em] font-semibold">
+        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gold text-ink px-5 py-1 font-mono text-[10px] uppercase tracking-[0.22em] font-semibold rounded-sm shadow-lg">
           {pkg.tagline}
         </div>
       )}
 
       {/* Tier name */}
-      <div className="mb-6 pb-6 border-b border-gold/15">
-        <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold mb-2">
-          The {pkg.name} Detail
+      <div className="mb-6 pb-6 border-b border-gold/20">
+        <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-gold/80 mb-2">
+          Service {pkg.id === 'mini' ? 'One' : pkg.id === 'premium' ? 'Two' : 'Three'}
         </div>
-        <div className="font-display text-4xl md:text-5xl text-cream italic mb-2">
+        <div className="font-display text-3xl md:text-4xl text-cream italic mb-1 leading-tight">
           {pkg.name}
         </div>
         {!pkg.featured && (
-          <div className="font-sans italic text-sm text-cream/60">{pkg.tagline}</div>
+          <div className="font-sans italic text-sm text-cream/55">{pkg.tagline}</div>
         )}
       </div>
 
       {/* Price */}
-      <div className="mb-6">
+      <div className="mb-7">
         <div className="flex items-baseline gap-2 mb-1">
-          <span className="font-display text-5xl md:text-6xl text-gold">£{pkg.oneOffPrice}</span>
+          <span className="font-display text-5xl md:text-6xl text-gold font-light">£{pkg.oneOffPrice}</span>
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-cream/50">
             one-off
           </span>
@@ -125,7 +130,7 @@ function PackageCard({
             >
               <path
                 d="M3 8.5L6.5 12L13 4.5"
-                stroke="#C9A86A"
+                stroke="#D4A853"
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -137,10 +142,10 @@ function PackageCard({
       </ul>
 
       {/* Duration tag */}
-      <div className="mb-6 font-mono text-[10px] uppercase tracking-[0.22em] text-cream/50 flex items-center gap-2">
+      <div className="mb-6 font-mono text-[10px] uppercase tracking-[0.22em] text-cream/45 flex items-center gap-2">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
-          <circle cx="6" cy="6" r="5" stroke="#5A5A5A" strokeWidth="1" />
-          <path d="M6 3v3l2 1" stroke="#5A5A5A" strokeWidth="1" strokeLinecap="round" />
+          <circle cx="6" cy="6" r="5" stroke="#7A7060" strokeWidth="1" />
+          <path d="M6 3v3l2 1" stroke="#7A7060" strokeWidth="1" strokeLinecap="round" />
         </svg>
         On-site · {pkg.duration}
       </div>
@@ -150,18 +155,18 @@ function PackageCard({
         <button
           type="button"
           onClick={() => onBook('oneoff')}
-          className={`w-full ${
+          className={`w-full py-3.5 font-sans text-[12px] uppercase tracking-[0.18em] font-semibold transition-all flex items-center justify-center gap-2 rounded-sm ${
             pkg.featured
-              ? 'bg-gold text-ink hover:bg-gold-bright'
-              : 'bg-gold/15 text-gold border border-gold/40 hover:bg-gold hover:text-ink'
-          } py-3.5 font-sans text-[12px] uppercase tracking-[0.18em] font-semibold transition-all flex items-center justify-center gap-2`}
+              ? 'bg-gold text-ink hover:bg-gold-bright shadow-lg shadow-gold/20'
+              : 'bg-gold/20 text-gold border border-gold/40 hover:bg-gold hover:text-ink'
+          }`}
         >
           Book one-off · £{pkg.oneOffPrice}
         </button>
         <button
           type="button"
           onClick={() => onBook('subscription')}
-          className="w-full text-cream/60 hover:text-gold py-2 font-sans text-[11px] uppercase tracking-[0.18em] transition-colors flex items-center justify-center gap-2"
+          className="w-full text-cream/55 hover:text-gold py-2 font-sans text-[11px] uppercase tracking-[0.18em] transition-colors flex items-center justify-center gap-2"
         >
           Or subscribe · £{pkg.monthlyPrice}/mo →
         </button>

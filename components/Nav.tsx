@@ -14,13 +14,21 @@ export function Nav() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Derive whether the nav bar itself should look solid:
+  // solid when scrolled OR when the mobile menu is open
+  const solidNav = scrolled || mobileOpen;
+
   return (
     <nav
       className={`fixed top-[38px] left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-ink/95 backdrop-blur-md border-b border-gold/15 py-3'
+        solidNav
+          ? 'border-b border-gold/15 py-3'
           : 'py-5'
       }`}
+      style={{
+        background: solidNav ? 'rgba(24, 21, 16, 0.98)' : 'transparent',
+        backdropFilter: solidNav ? 'blur(12px)' : 'none',
+      }}
     >
       <div className="wrap flex items-center justify-between">
         <Link href="/" aria-label="Furniterior home">
@@ -58,16 +66,19 @@ export function Nav() {
         </button>
       </div>
 
-      {/* Mobile menu drawer */}
+      {/* Mobile menu drawer — always fully opaque */}
       {mobileOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-ink/98 backdrop-blur-md border-t border-gold/15 py-6">
+        <div
+          className="md:hidden absolute top-full left-0 right-0 border-t border-gold/20 py-6"
+          style={{ background: 'rgba(24, 21, 16, 0.99)', backdropFilter: 'blur(16px)' }}
+        >
           <ul className="wrap flex flex-col gap-5 font-sans text-sm uppercase tracking-[0.18em] text-cream/85">
             <li><Link href="#packages" onClick={() => setMobileOpen(false)} className="block py-2 hover:text-gold">Packages</Link></li>
             <li><Link href="#how" onClick={() => setMobileOpen(false)} className="block py-2 hover:text-gold">How it works</Link></li>
             <li><Link href="#gallery" onClick={() => setMobileOpen(false)} className="block py-2 hover:text-gold">Gallery</Link></li>
             <li><Link href="#area" onClick={() => setMobileOpen(false)} className="block py-2 hover:text-gold">Area</Link></li>
             <li><Link href="#faq" onClick={() => setMobileOpen(false)} className="block py-2 hover:text-gold">FAQ</Link></li>
-            <li className="pt-2">
+            <li className="pt-2 border-t border-gold/15">
               <Link
                 href="#packages"
                 onClick={() => setMobileOpen(false)}

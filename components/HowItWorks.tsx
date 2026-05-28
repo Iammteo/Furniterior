@@ -4,7 +4,7 @@ export function HowItWorks() {
       n: '01',
       title: 'Choose your detail',
       description:
-        'Pick Bronze, Silver or Gold based on what your car needs. One-off or monthly subscription — both fully online.',
+        'Pick Mini Valet, Premium Valet, or Silver Full Detailing based on what your car needs. One-off or monthly subscription — both fully online.',
     },
     {
       n: '02',
@@ -27,7 +27,11 @@ export function HowItWorks() {
   ];
 
   return (
-    <section id="how" className="py-32 bg-ink-soft relative">
+    <section
+      id="how"
+      className="py-32 relative"
+      style={{ background: 'linear-gradient(180deg, #231E17 0%, #2A2318 50%, #231E17 100%)' }}
+    >
       <div className="wrap relative">
         <div className="grid md:grid-cols-12 gap-8 mb-20 items-end">
           <div className="md:col-span-7">
@@ -51,10 +55,11 @@ export function HowItWorks() {
           {steps.map((step, i) => (
             <div
               key={i}
-              className="relative bg-ink border border-gold/20 rounded-sm p-8 hover:border-gold/50 transition-all group"
+              className="relative border border-gold/20 rounded-sm p-8 hover:border-gold/50 transition-all group"
+              style={{ background: 'linear-gradient(145deg, #1E1A12 0%, #181510 100%)' }}
             >
               {/* Number */}
-              <div className="font-display text-6xl text-gold/30 mb-6 font-light group-hover:text-gold transition-colors">
+              <div className="font-display text-6xl text-gold/25 mb-6 font-light group-hover:text-gold/60 transition-colors">
                 {step.n}
               </div>
 
@@ -64,7 +69,7 @@ export function HowItWorks() {
                   <svg width="24" height="12" viewBox="0 0 24 12" fill="none" aria-hidden>
                     <path
                       d="M0 6h22M16 1l6 5-6 5"
-                      stroke="#C9A86A"
+                      stroke="#D4A853"
                       strokeWidth="1"
                       strokeLinecap="round"
                       strokeLinejoin="round"

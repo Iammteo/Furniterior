@@ -1,80 +1,75 @@
 // Furniterior — Service packages data
-// Single source of truth for Bronze / Silver / Gold tiers.
+// Single source of truth for Mini Valet / Premium Valet / Silver Full Detailing tiers.
 // Update prices/features here, site updates everywhere.
 
 export type PackageTier = {
-  id: 'bronze' | 'silver' | 'gold';
+  id: 'mini' | 'premium' | 'silver';
   name: string;
   tagline: string;
   oneOffPrice: number;
   monthlyPrice: number;
-  monthlyFrequency: string; // e.g. "every 2 weeks"
-  duration: string; // approx time on site
+  monthlyFrequency: string;
+  duration: string;
   featured?: boolean;
   features: string[];
-  // Stripe Payment Links — replace with real links from Tobi's Stripe
   oneOffStripeLink: string;
   subscriptionStripeLink: string;
 };
 
 export const packages: PackageTier[] = [
   {
-    id: 'bronze',
-    name: 'Bronze',
+    id: 'mini',
+    name: 'Mini Valet',
     tagline: 'The essential refresh',
-    oneOffPrice: 50,
-    monthlyPrice: 50,
+    oneOffPrice: 25,
+    monthlyPrice: 25,
     monthlyFrequency: 'every 4 weeks',
     duration: '60–90 minutes',
     features: [
-      'Hand wash with pH-neutral shampoo',
-      'Wheel clean & tyre dressing',
-      'Streak-free window finish (exterior)',
-      'Quick-dry leather chamois',
-      'Door shuts wiped down',
+      'Exterior wash',
+      'Interior clean',
+      'Tyre polish',
+      'Full vacuum',
     ],
-    oneOffStripeLink: 'https://buy.stripe.com/SAMPLE_BRONZE_ONEOFF',          // TODO
-    subscriptionStripeLink: 'https://buy.stripe.com/SAMPLE_BRONZE_SUB',        // TODO
+    oneOffStripeLink: 'https://buy.stripe.com/SAMPLE_MINI_ONEOFF',          // TODO
+    subscriptionStripeLink: 'https://buy.stripe.com/SAMPLE_MINI_SUB',        // TODO
   },
   {
-    id: 'silver',
-    name: 'Silver',
+    id: 'premium',
+    name: 'Premium Valet',
     tagline: 'Most popular',
-    oneOffPrice: 90,
-    monthlyPrice: 90,
+    oneOffPrice: 40,
+    monthlyPrice: 40,
     monthlyFrequency: 'every 3 weeks',
     duration: '2–3 hours',
     featured: true,
     features: [
-      'Everything in Bronze, plus:',
-      'Full interior vacuum & detail',
-      'Dashboard, console & door panels',
-      'Interior windows cleaned',
-      'Boot & seat cracks vacuumed',
-      'Tyre & arch decontamination',
+      'Full exterior wash & dry rinse',
+      'Interior clean & polish',
+      'Full vacuum',
+      'Tyre polish',
+      'Pretreatment before exterior wash',
     ],
-    oneOffStripeLink: 'https://buy.stripe.com/SAMPLE_SILVER_ONEOFF',           // TODO
-    subscriptionStripeLink: 'https://buy.stripe.com/SAMPLE_SILVER_SUB',         // TODO
+    oneOffStripeLink: 'https://buy.stripe.com/SAMPLE_PREMIUM_ONEOFF',        // TODO
+    subscriptionStripeLink: 'https://buy.stripe.com/SAMPLE_PREMIUM_SUB',      // TODO
   },
   {
-    id: 'gold',
-    name: 'Gold',
-    tagline: 'The full detail',
-    oneOffPrice: 130,
-    monthlyPrice: 130,
+    id: 'silver',
+    name: 'Silver Full Detailing',
+    tagline: 'The complete package',
+    oneOffPrice: 90,
+    monthlyPrice: 90,
     monthlyFrequency: 'every 2 weeks',
     duration: '4–5 hours',
     features: [
-      'Everything in Silver, plus:',
-      'Hand-applied wax (3 months protection)',
-      'Leather conditioning treatment',
-      'Engine bay clean & dress',
-      'Headlight clarity restoration',
-      'Plastic & trim restoration',
-      'Premium fragrance finish',
+      'Everything in Premium Valet, plus:',
+      'Wheels & tyres restoration',
+      'Exterior polish',
+      'Engine bay clean',
+      'Headlight restoration',
     ],
-    oneOffStripeLink: 'https://buy.stripe.com/SAMPLE_GOLD_ONEOFF',             // TODO
-    subscriptionStripeLink: 'https://buy.stripe.com/SAMPLE_GOLD_SUB',           // TODO
+    oneOffStripeLink: 'https://buy.stripe.com/SAMPLE_SILVER_ONEOFF',         // TODO
+    subscriptionStripeLink: 'https://buy.stripe.com/SAMPLE_SILVER_SUB',       // TODO
   },
 ];
 
