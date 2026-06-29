@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { packages, type PackageTier } from '@/lib/packages';
+import { buildWhatsAppGeneralUrl } from '@/lib/site';
 import { BookingModal } from './BookingModal';
 
 export function Packages() {
@@ -95,16 +96,29 @@ function PackageCard({
 
       {/* Price */}
       <div className="mb-7">
-        <div className="flex items-baseline gap-2 mb-1">
-          <span className="font-display text-5xl md:text-6xl text-gold font-light">£{pkg.oneOffPrice}</span>
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-cream/50">
-            one-off
-          </span>
-        </div>
-        <div className="font-sans text-sm text-cream/60">
-          or <span className="text-gold-pale font-medium">£{pkg.monthlyPrice}/month</span>{' '}
-          <span className="text-cream/40">{pkg.monthlyFrequency}</span>
-        </div>
+        {pkg.quoteOnly ? (
+          <>
+            <div className="flex items-baseline gap-2 mb-1">
+              <span className="font-display text-5xl md:text-6xl text-gold font-light">Get Quote</span>
+            </div>
+            <div className="font-sans text-sm text-cream/60">
+              Tailored to your vehicle &amp; its condition
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="flex items-baseline gap-2 mb-1">
+              <span className="font-display text-5xl md:text-6xl text-gold font-light">£{pkg.oneOffPrice}</span>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-cream/50">
+                one-off
+              </span>
+            </div>
+            <div className="font-sans text-sm text-cream/60">
+              or <span className="text-gold-pale font-medium">£{pkg.monthlyPrice}/month</span>{' '}
+              <span className="text-cream/40">{pkg.monthlyFrequency}</span>
+            </div>
+          </>
+        )}
       </div>
 
       {/* Features list */}
@@ -141,26 +155,39 @@ function PackageCard({
         On-site · {pkg.duration}
       </div>
 
-      {/* Two CTAs */}
+      {/* CTAs */}
       <div className="space-y-3">
-        <button
-          type="button"
-          onClick={() => onBook('oneoff')}
-          className={`w-full py-3.5 font-sans text-[12px] uppercase tracking-[0.18em] font-semibold transition-all flex items-center justify-center gap-2 rounded-sm ${
-            pkg.featured
-              ? 'bg-gold text-ink hover:bg-gold-bright shadow-lg shadow-gold/20'
-              : 'bg-gold/20 text-gold border border-gold/40 hover:bg-gold hover:text-ink'
-          }`}
-        >
-          Book one-off · £{pkg.oneOffPrice}
-        </button>
-        <button
-          type="button"
-          onClick={() => onBook('subscription')}
-          className="w-full text-cream/55 hover:text-gold py-2 font-sans text-[11px] uppercase tracking-[0.18em] transition-colors flex items-center justify-center gap-2"
-        >
-          Or subscribe · £{pkg.monthlyPrice}/mo →
-        </button>
+        {pkg.quoteOnly ? (
+          <a
+            href={buildWhatsAppGeneralUrl(`Hi Furniterior - I'd like a quote for the ${pkg.name}. My vehicle is: `)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-3.5 font-sans text-[12px] uppercase tracking-[0.18em] font-semibold transition-all flex items-center justify-center gap-2 rounded-sm bg-gold/20 text-gold border border-gold/40 hover:bg-gold hover:text-ink"
+          >
+            Get a quote <span aria-hidden>→</span>
+          </a>
+        ) : (
+          <>
+            <button
+              type="button"
+              onClick={() => onBook('oneoff')}
+              className={`w-full py-3.5 font-sans text-[12px] uppercase tracking-[0.18em] font-semibold transition-all flex items-center justify-center gap-2 rounded-sm ${
+                pkg.featured
+                  ? 'bg-gold text-ink hover:bg-gold-bright shadow-lg shadow-gold/20'
+                  : 'bg-gold/20 text-gold border border-gold/40 hover:bg-gold hover:text-ink'
+              }`}
+            >
+              Book one-off · £{pkg.oneOffPrice}
+            </button>
+            <button
+              type="button"
+              onClick={() => onBook('subscription')}
+              className="w-full text-cream/55 hover:text-gold py-2 font-sans text-[11px] uppercase tracking-[0.18em] transition-colors flex items-center justify-center gap-2"
+            >
+              Or subscribe · £{pkg.monthlyPrice}/mo →
+            </button>
+          </>
+        )}
       </div>
     </article>
   );

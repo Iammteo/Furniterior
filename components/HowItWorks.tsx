@@ -4,7 +4,7 @@ export function HowItWorks() {
       n: '01',
       title: 'Choose your detail',
       description:
-        'Pick Mini Valet, Premium Valet, or Silver Full Detailing based on what your car needs. One-off or monthly subscription - both fully online.',
+        'Pick Mini Valet, Full Valet, or Full Detailing based on what your car needs. One-off or monthly subscription - both fully online.',
     },
     {
       n: '02',
