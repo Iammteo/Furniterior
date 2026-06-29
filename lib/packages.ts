@@ -1,5 +1,5 @@
 // Furniterior - Service packages data
-// Single source of truth for Mini Valet / Premium Valet / Silver Full Detailing tiers.
+// Single source of truth for Mini Valet / Full Valet / Full Detailing tiers.
 // Update prices/features here, site updates everywhere.
 
 export type PackageTier = {
@@ -11,6 +11,7 @@ export type PackageTier = {
   monthlyFrequency: string;
   duration: string;
   featured?: boolean;
+  quoteOnly?: boolean;
   features: string[];
   oneOffStripeLink: string;
   subscriptionStripeLink: string;
@@ -21,7 +22,7 @@ export const packages: PackageTier[] = [
     id: 'mini',
     name: 'Mini Valet',
     tagline: 'The essential refresh',
-    oneOffPrice: 25,
+    oneOffPrice: 30,
     monthlyPrice: 25,
     monthlyFrequency: 'every 4 weeks',
     duration: '60–90 minutes',
@@ -36,10 +37,10 @@ export const packages: PackageTier[] = [
   },
   {
     id: 'premium',
-    name: 'Premium Valet',
+    name: 'Full Valet',
     tagline: 'Most popular',
-    oneOffPrice: 40,
-    monthlyPrice: 40,
+    oneOffPrice: 70,
+    monthlyPrice: 65,
     monthlyFrequency: 'every 3 weeks',
     duration: '2–3 hours',
     featured: true,
@@ -55,14 +56,15 @@ export const packages: PackageTier[] = [
   },
   {
     id: 'silver',
-    name: 'Silver Full Detailing',
+    name: 'Full Detailing',
     tagline: 'The complete package',
-    oneOffPrice: 90,
-    monthlyPrice: 90,
+    quoteOnly: true,
+    oneOffPrice: 0,
+    monthlyPrice: 0,
     monthlyFrequency: 'every 2 weeks',
     duration: '4–5 hours',
     features: [
-      'Everything in Premium Valet, plus:',
+      'Everything in Full Valet, plus:',
       'Wheels & tyres restoration',
       'Exterior polish',
       'Engine bay clean',

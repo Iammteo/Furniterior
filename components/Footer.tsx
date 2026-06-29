@@ -26,9 +26,9 @@ export function Footer() {
               Service
             </h3>
             <ul className="space-y-2 font-sans text-cream/70 text-sm">
-              <li><Link href="#packages" className="hover:text-gold transition-colors">Mini Valet · £25</Link></li>
-              <li><Link href="#packages" className="hover:text-gold transition-colors">Premium Valet · £40</Link></li>
-              <li><Link href="#packages" className="hover:text-gold transition-colors">Silver Full Detail · £90</Link></li>
+              <li><Link href="#packages" className="hover:text-gold transition-colors">Mini Valet · £30</Link></li>
+              <li><Link href="#packages" className="hover:text-gold transition-colors">Full Valet · £70</Link></li>
+              <li><Link href="#packages" className="hover:text-gold transition-colors">Full Detailing · Get Quote</Link></li>
               <li><Link href="#packages" className="hover:text-gold transition-colors">Subscriptions</Link></li>
             </ul>
           </div>
