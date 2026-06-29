@@ -28,16 +28,12 @@ export function ServiceArea() {
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           {/* Left: copy + checker */}
           <div>
-            <div className="inline-flex items-center gap-3 mb-6 font-mono text-[11px] uppercase tracking-[0.32em] text-gold">
-              <span className="w-12 h-px bg-gold" />
-              <span>№ 04 · Service Area</span>
-            </div>
-            <h2 className="font-display text-4xl md:text-6xl font-light leading-[1.05] text-cream mb-8">
+            <h2 className="font-display text-4xl md:text-6xl font-light leading-[1.05] text-white mb-8">
               We cover most of <em className="italic text-gold">Greater Manchester.</em>
             </h2>
 
             <p className="font-sans text-lg text-cream/70 leading-relaxed mb-8">
-              Quick check below to see if your postcode's covered. If you're just outside, message us — we often go further for full Silver details.
+              Quick check below to see if your postcode's covered. If you're just outside, message us - we often go further for full Silver details.
             </p>
 
             {/* Postcode checker */}
@@ -94,10 +90,10 @@ export function ServiceArea() {
                         Outside our standard area
                       </div>
                       <div className="font-sans text-xs text-cream/75 mb-2">
-                        Doesn't mean we can't reach you — message us and we'll let you know.
+                        Doesn't mean we can't reach you - message us and we'll let you know.
                       </div>
                       <a
-                        href={buildWhatsAppGeneralUrl(`Hi Furniterior — my postcode is ${checkPostcode}, can you reach me?`)}
+                        href={buildWhatsAppGeneralUrl(`Hi Furniterior - my postcode is ${checkPostcode}, can you reach me?`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="font-mono text-[10px] uppercase tracking-[0.22em] text-gold hover:text-gold-bright"
@@ -132,7 +128,7 @@ export function ServiceArea() {
                 ))}
               </div>
               <p className="mt-5 pt-5 border-t border-cream/10 font-sans text-xs text-cream/55 leading-relaxed">
-                Don't see yours? Use the checker — sometimes nearby postcodes work too. We've travelled as far as Stockport, Bolton and Bury for full Silver details.
+                Don't see yours? Use the checker - sometimes nearby postcodes work too. We've travelled as far as Stockport, Bolton and Bury for full Silver details.
               </p>
             </div>
           </div>

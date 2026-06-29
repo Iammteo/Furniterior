@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Furniterior — Mobile Car Detailing · Manchester',
+  title: 'Furniterior - Mobile Car Detailing · Manchester',
   description:
     'Premium mobile car detailing across Greater Manchester. We come to you. Bronze · Silver · Gold packages from £50.',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     apple: '/images/brand/favicon.png',
   },
   openGraph: {
-    title: 'Furniterior — Mobile Car Detailing · Manchester',
+    title: 'Furniterior - Mobile Car Detailing · Manchester',
     description: 'Premium mobile car detailing. We come to you. From £50.',
     type: 'website',
     locale: 'en_GB',

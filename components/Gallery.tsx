@@ -15,18 +15,9 @@ export function Gallery() {
       <div className="wrap relative">
         <div className="grid md:grid-cols-12 gap-8 mb-16 items-end">
           <div className="md:col-span-7">
-            <div className="inline-flex items-center gap-3 mb-6 font-mono text-[11px] uppercase tracking-[0.32em] text-gold">
-              <span className="w-12 h-px bg-gold" />
-              <span>№ 03 · Recent Work</span>
-            </div>
-            <h2 className="font-display text-5xl md:text-7xl font-light leading-[1.05] text-cream">
+            <h2 className="font-display text-5xl md:text-7xl font-light leading-[1.05] text-white">
               Hand-finished, <em className="italic text-gold">every time.</em>
             </h2>
-          </div>
-          <div className="md:col-span-5">
-            <p className="font-sans text-base text-cream/70 leading-relaxed">
-              Recent details from across Greater Manchester. From quick refreshes to full Gold-tier restorations.
-            </p>
           </div>
         </div>
 
@@ -39,7 +30,7 @@ export function Gallery() {
                 item.tall ? 'aspect-[3/4] md:row-span-2' : 'aspect-square'
               }`}
             >
-              {/* Placeholder gradient — replace with real photos */}
+              {/* Placeholder gradient - replace with real photos */}
               <PhotoPlaceholder index={i} />
 
               {/* Caption */}
@@ -57,11 +48,6 @@ export function Gallery() {
             </figure>
           ))}
         </div>
-
-        {/* Sample notice */}
-        <p className="text-center mt-12 font-mono text-[10px] uppercase tracking-[0.22em] text-cream/40">
-          Sample placeholders shown · Real photography will replace these on launch
-        </p>
       </div>
     </section>
   );

@@ -20,18 +20,9 @@ export function Packages() {
           {/* Header */}
           <div className="grid md:grid-cols-12 gap-8 mb-20 items-end">
             <div className="md:col-span-7">
-              <div className="inline-flex items-center gap-3 mb-6 font-mono text-[11px] uppercase tracking-[0.32em] text-gold">
-                <span className="w-12 h-px bg-gold" />
-                <span>№ 01 · Choose Your Package</span>
-              </div>
-              <h2 className="font-display text-5xl md:text-7xl font-light leading-[1.05] text-cream">
+              <h2 className="font-display text-5xl md:text-7xl font-light leading-[1.05] text-white">
                 Three tiers, <em className="italic text-gold">one standard.</em>
               </h2>
-            </div>
-            <div className="md:col-span-5">
-              <p className="font-sans text-base md:text-lg text-cream/75 leading-relaxed">
-                Whether you need a quick refresh or a full concours-quality detail, every package is hand-finished by us — to the same standard.
-              </p>
             </div>
           </div>
 
@@ -48,7 +39,7 @@ export function Packages() {
 
           {/* Bottom note */}
           <p className="text-center mt-12 font-mono text-[10px] uppercase tracking-[0.22em] text-cream/50">
-            Subscriptions can be paused or cancelled anytime · Pay securely via Stripe
+            Subscriptions can be paused or cancelled anytime
           </p>
         </div>
       </section>

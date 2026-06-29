@@ -16,7 +16,7 @@
 //           mute: '#5A5A5A',         // Mid-grey for secondary text on dark
 //         },
 //         gold: {
-//           DEFAULT: '#C9A86A',      // Primary gold — refined, not flashy
+//           DEFAULT: '#C9A86A',      // Primary gold - refined, not flashy
 //           bright: '#D9BC7A',       // Hover/accent gold
 //           deep: '#A88752',         // Pressed/dark gold
 //           pale: '#E8D8B0',         // Highlight gold for body text on dark
@@ -74,7 +74,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Lifted black palette — still dark but with more warmth and air
+        // Lifted black palette - still dark but with more warmth and air
         ink: {
           DEFAULT: '#181510',     // Warm dark brown-black (was pure #0A0A0A)
           soft: '#231E17',        // Warm card surface (was cold #141414)
@@ -83,9 +83,9 @@ const config: Config = {
         },
         gold: {
           DEFAULT: '#D4A853',     // Richer, brighter gold (was muted #C9A86A)
-          bright: '#E2BC68',      // Hover gold — punchier
+          bright: '#E2BC68',      // Hover gold - punchier
           deep: '#B08840',        // Pressed/dark gold
-          pale: '#F0DFA8',        // Highlight — warmer and more legible
+          pale: '#F0DFA8',        // Highlight - warmer and more legible
         },
         cream: {
           DEFAULT: '#FAF6EC',     // Brighter cream for light-mode sections

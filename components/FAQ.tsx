@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: 'What do you need from me on the day?',
-    a: 'A safe spot to park (driveway, allocated space, or street), and access to a power socket and a tap if possible. We bring everything else — water, products, lighting, the lot.',
+    a: 'A safe spot to park (driveway, allocated space, or street), and access to a power socket and a tap if possible. We bring everything else - water, products, lighting, the lot.',
   },
   {
     q: 'How long does each package take?',
@@ -26,15 +26,15 @@ const faqs = [
   },
   {
     q: 'How do subscriptions work?',
-    a: 'You get the same package each cycle (every 2-4 weeks depending on tier) at the same monthly price. Stripe handles the recurring payment. You can pause or cancel anytime from your Stripe portal — no awkward conversations needed.',
+    a: 'You get the same package each cycle (every 2-4 weeks depending on tier) at the same monthly price. Stripe handles the recurring payment. You can pause or cancel anytime from your Stripe portal - no awkward conversations needed.',
   },
   {
     q: 'Do you do larger vehicles or unusual cars?',
-    a: 'Most cars, vans, and SUVs are covered. For very large vehicles, classic cars, or specialist requests, drop us a WhatsApp first — we\'ll quote a custom price.',
+    a: 'Most cars, vans, and SUVs are covered. For very large vehicles, classic cars, or specialist requests, drop us a WhatsApp first - we\'ll quote a custom price.',
   },
   {
     q: 'Can I gift a detail to someone?',
-    a: 'Yes — message us on WhatsApp and we\'ll set it up as a one-off booking under their name. Great for birthdays, Christmas, new-driver gifts.',
+    a: 'Yes - message us on WhatsApp and we\'ll set it up as a one-off booking under their name. Great for birthdays, Christmas, new-driver gifts.',
   },
 ];
 
@@ -46,15 +46,11 @@ export function FAQ() {
       <div className="wrap">
         <div className="grid md:grid-cols-12 gap-8 mb-16 items-start">
           <div className="md:col-span-5">
-            <div className="inline-flex items-center gap-3 mb-6 font-mono text-[11px] uppercase tracking-[0.32em] text-gold">
-              <span className="w-12 h-px bg-gold" />
-              <span>№ 06 · Common Questions</span>
-            </div>
-            <h2 className="font-display text-4xl md:text-5xl font-light leading-[1.05] text-cream mb-6">
+            <h2 className="font-display text-4xl md:text-5xl font-light leading-[1.05] text-white mb-6">
               Anything else <em className="italic text-gold">on your mind?</em>
             </h2>
-            <p className="font-sans text-base text-cream/70 leading-relaxed mb-6">
-              The most common questions we get. If your answer's not here, drop us a WhatsApp — we usually reply within the hour.
+            <p className="font-sans text-base text-cream/70 leading-relaxed mb-6 max-w-md">
+              The most common questions we get. If your answer's not here, drop us a WhatsApp - we usually reply within the hour.
             </p>
             <a
               href={buildWhatsAppGeneralUrl()}

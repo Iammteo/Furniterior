@@ -1,4 +1,4 @@
-// SAMPLE testimonials — replace with real reviews before launch.
+// SAMPLE testimonials - replace with real reviews before launch.
 
 export function Reviews() {
   const reviews = [
@@ -9,7 +9,7 @@ export function Reviews() {
       stars: 5,
     },
     {
-      text: 'Subscription has been brilliant — fortnightly Silver wash means my car stays sharp without me lifting a finger. Great service, professional.',
+      text: 'Subscription has been brilliant - fortnightly Silver wash means my car stays sharp without me lifting a finger. Great service, professional.',
       author: 'Priya M.',
       meta: 'Salford · Silver subscription',
       stars: 5,
@@ -26,12 +26,7 @@ export function Reviews() {
     <section className="py-32 bg-ink relative">
       <div className="wrap">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 mb-6 font-mono text-[11px] uppercase tracking-[0.32em] text-gold">
-            <span className="w-12 h-px bg-gold" />
-            <span>№ 05 · Reviews</span>
-            <span className="w-12 h-px bg-gold" />
-          </div>
-          <h2 className="font-display text-5xl md:text-6xl font-light leading-tight text-cream max-w-3xl mx-auto">
+          <h2 className="font-display text-5xl md:text-6xl font-light leading-tight text-white max-w-3xl mx-auto">
             Words from the <em className="italic text-gold">drivers seat.</em>
           </h2>
         </div>
