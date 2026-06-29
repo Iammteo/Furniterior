@@ -75,7 +75,7 @@ export function BookingModal({ pkg, mode, onClose }: BookingModalProps) {
       packagePrice: price,
       vehicleType: vehicleType.trim(),
       postcode: postcode.trim().toUpperCase(),
-      notes: inArea ? notes.trim() : `${notes.trim() ? notes.trim() + ' · ' : ''}(Note: postcode may be outside standard service area — please confirm)`,
+      notes: inArea ? notes.trim() : `${notes.trim() ? notes.trim() + ' · ' : ''}(Note: postcode may be outside standard service area - please confirm)`,
       isSubscription,
     });
 

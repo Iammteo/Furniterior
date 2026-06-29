@@ -1,4 +1,4 @@
-// Furniterior — Service packages data
+// Furniterior - Service packages data
 // Single source of truth for Mini Valet / Premium Valet / Silver Full Detailing tiers.
 // Update prices/features here, site updates everywhere.
 

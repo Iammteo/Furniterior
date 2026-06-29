@@ -4,7 +4,7 @@ export function HowItWorks() {
       n: '01',
       title: 'Choose your detail',
       description:
-        'Pick Mini Valet, Premium Valet, or Silver Full Detailing based on what your car needs. One-off or monthly subscription — both fully online.',
+        'Pick Mini Valet, Premium Valet, or Silver Full Detailing based on what your car needs. One-off or monthly subscription - both fully online.',
     },
     {
       n: '02',
@@ -14,12 +14,6 @@ export function HowItWorks() {
     },
     {
       n: '03',
-      title: 'Pay & pick a slot',
-      description:
-        'Pay in seconds via Stripe. You\'re taken to our calendar to choose a date and time that works for you.',
-    },
-    {
-      n: '04',
       title: 'We come to you',
       description:
         'We arrive at your home or workplace, set up, and detail your car start to finish. Drive away looking sharp.',
@@ -35,12 +29,8 @@ export function HowItWorks() {
       <div className="wrap relative">
         <div className="grid md:grid-cols-12 gap-8 mb-20 items-end">
           <div className="md:col-span-7">
-            <div className="inline-flex items-center gap-3 mb-6 font-mono text-[11px] uppercase tracking-[0.32em] text-gold">
-              <span className="w-12 h-px bg-gold" />
-              <span>№ 02 · How It Works</span>
-            </div>
-            <h2 className="font-display text-5xl md:text-7xl font-light leading-[1.05] text-cream">
-              Four steps. <em className="italic text-gold">No hassle.</em>
+            <h2 className="font-display text-5xl md:text-7xl font-light leading-[1.05] text-white">
+              Three steps. <em className="italic text-gold">No hassle.</em>
             </h2>
           </div>
           <div className="md:col-span-5">
@@ -51,7 +41,7 @@ export function HowItWorks() {
         </div>
 
         {/* Steps grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-4">
           {steps.map((step, i) => (
             <div
               key={i}

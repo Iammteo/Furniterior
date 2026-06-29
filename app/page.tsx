@@ -1,7 +1,6 @@
 import { Ticker } from '@/components/Ticker';
 import { Nav } from '@/components/Nav';
 import { Hero } from '@/components/Hero';
-import { Trust } from '@/components/Trust';
 import { Packages } from '@/components/Packages';
 import { HowItWorks } from '@/components/HowItWorks';
 import { Gallery } from '@/components/Gallery';
@@ -19,7 +18,6 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Trust />
         <Packages />
         <HowItWorks />
         <Gallery />

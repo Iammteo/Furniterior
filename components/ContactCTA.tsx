@@ -13,7 +13,7 @@ export function ContactCTA() {
               <span>Ready when you are</span>
             </div>
 
-            <h2 className="font-display text-4xl md:text-6xl font-light leading-tight text-cream mb-8">
+            <h2 className="font-display text-4xl md:text-6xl font-light leading-tight text-white mb-8">
               Let's get your car <em className="italic text-gold">looking right.</em>
             </h2>
 

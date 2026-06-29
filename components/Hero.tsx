@@ -17,7 +17,7 @@ export function Hero() {
           backgroundRepeat: 'no-repeat',
         }}
       />
-      {/* Lighter overlay — photo is more visible, especially on the right */}
+      {/* Lighter overlay - photo is more visible, especially on the right */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -37,15 +37,8 @@ export function Hero() {
       <div className="wrap relative z-10 grid md:grid-cols-12 gap-8 md:gap-12 items-center min-h-[70vh]">
         {/* Left: copy (7 cols) */}
         <div className="md:col-span-7 animate-fadeUp">
-          {/* Eyebrow */}
-          <div className="flex items-center gap-3 mb-8 font-mono text-[11px] uppercase tracking-[0.32em] text-gold">
-            <span className="w-2 h-2 rounded-full bg-gold animate-shimmer" />
-            <span className="w-12 h-px bg-gold/40" />
-            <span>Mobile Detailing · Greater Manchester</span>
-          </div>
-
           {/* Big headline */}
-          <h1 className="font-display text-[64px] md:text-[88px] leading-[0.95] tracking-tight font-light mb-8 text-cream">
+          <h1 className="font-display text-[64px] md:text-[88px] leading-[0.95] tracking-tight font-light mb-8 text-white">
             Your car,
             <br />
             <em className="italic text-gold font-normal">restored</em>
@@ -55,7 +48,7 @@ export function Hero() {
 
           <div className="w-full max-w-lg pt-6 border-t border-gold/20">
             <p className="font-sans text-lg leading-relaxed text-cream/80">
-              Hand-finished mobile car detailing across Greater Manchester. From a quick refresh to a full concours-quality detail — we drive to you.{' '}
+              Hand-finished mobile car detailing across Greater Manchester. From a quick refresh to a full concours-quality detail - we drive to you.{' '}
               <span className="text-gold-pale italic">Book online, pay secure, pick your slot.</span>
             </p>
           </div>
@@ -81,13 +74,13 @@ export function Hero() {
 
           {/* Quick stats row */}
           <div className="grid grid-cols-3 gap-6 md:gap-10 mt-14 pt-8 border-t border-gold/15 max-w-xl">
-            <Stat label="Starting from" value="£25" />
+            <Stat label="Starting from" value="£35" />
             <Stat label="Availability" value="Same day" />
             <Stat label="Postcodes covered" value="40+" />
           </div>
         </div>
 
-        {/* Right col — photo shows through the lighter overlay */}
+        {/* Right col - photo shows through the lighter overlay */}
         <div className="hidden md:block md:col-span-5" />
       </div>
 

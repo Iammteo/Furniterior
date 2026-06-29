@@ -1,4 +1,4 @@
-// Furniterior — Site configuration
+// Furniterior - Site configuration
 // Update these values when Tobi confirms; site updates everywhere.
 
 export const site = {
@@ -22,7 +22,7 @@ export const site = {
   hours: 'Mon – Sat · 8am – 6pm',
   leadTime: 'Same-day or next-day where available',
 
-  // Service area — postcodes covered (sample list)
+  // Service area - postcodes covered (sample list)
   serviceArea: [
     'M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9',
     'M11', 'M12', 'M13', 'M14', 'M15', 'M16', 'M17', 'M18', 'M19',
@@ -32,7 +32,7 @@ export const site = {
     'SK4', 'SK5', 'SK6', 'SK7', 'SK8',  // Stockport edges
   ],
 
-  // Calendly link — TODO: replace with real link
+  // Calendly link - TODO: replace with real link
   calendlyUrl: 'https://calendly.com/furniterior/booking',
 };
 
@@ -52,8 +52,8 @@ export const buildWhatsAppOrderUrl = (params: {
 
   const lines = [
     isSubscription
-      ? `Hi Furniterior — I'd like to subscribe to the ${packageName} plan (£${packagePrice}/month).`
-      : `Hi Furniterior — I'd like to book the ${packageName} (£${packagePrice}).`,
+      ? `Hi Furniterior - I'd like to subscribe to the ${packageName} plan (£${packagePrice}/month).`
+      : `Hi Furniterior - I'd like to book the ${packageName} (£${packagePrice}).`,
     '',
   ];
 
@@ -70,13 +70,13 @@ export const buildWhatsAppOrderUrl = (params: {
 export const buildWhatsAppGeneralUrl = (text?: string) => {
   const defaultMessage =
     text ||
-    `Hi Furniterior — I have a question about your detailing services. Could you let me know more details? Thank you!`;
+    `Hi Furniterior - I have a question about your detailing services. Could you let me know more details? Thank you!`;
   return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(defaultMessage)}`;
 };
 
 export const buildWhatsAppEnquiryUrl = (vehicleType: string, postcode: string, notes: string) => {
   const lines = [
-    `Hi Furniterior — quick enquiry:`,
+    `Hi Furniterior - quick enquiry:`,
     '',
   ];
   if (vehicleType) lines.push(`🚗 Vehicle: ${vehicleType}`);
